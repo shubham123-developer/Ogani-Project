@@ -224,7 +224,7 @@ function Product({ item }) {
       <div
         className="relative overflow-hidden bg-cover bg-center w-full h-[250px] sm:h-[300px]"
         style={{
-          backgroundImage: `url(http://localhost:8080/images/${item.images[0].replaceAll(" ", "%20")})`,
+          backgroundImage: `url(${import.meta.env.VITE_BACKEND_HOST}/images/${item.images[0].replaceAll(" ", "%20")})`,
         }}
       >
 

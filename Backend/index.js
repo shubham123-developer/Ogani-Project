@@ -20,6 +20,11 @@ dotenv.config();
 const PORT = process.env.PORT || 8080;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/ogani";
 const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
+const ALLOWED_ORIGINS = [
+  FRONTEND_URL,
+  "https://ogani-project.vercel.app",
+  "http://localhost:5173",
+].filter(Boolean);
 
 mongoose.connect(MONGODB_URI)
     .then(() => console.log("Connected!"))
@@ -28,7 +33,12 @@ mongoose.connect(MONGODB_URI)
 
 const app = express();
 app.use(cors({
-    origin: FRONTEND_URL,
+    origin: function (origin, callback) {
+        if (!origin || ALLOWED_ORIGINS.includes(origin)) {
+            return callback(null, true);
+        }
+        callback(new Error("Not allowed by CORS"));
+    },
     credentials: true
 }));
 
