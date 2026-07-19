@@ -1,0 +1,291 @@
+[
+  {
+    "title": "Nutrich Chicken Curry Cut",
+    "description": "Precisely cut and cleaned meat, consistently tender and ideal for curries.",
+    "price": 105,
+    "category": "fresh meat",
+    "images": ["Nutrich Chicken.avif"]
+  },
+  {
+    "title": "Delichic Frozen Chicken Keema",
+    "description": "Raw Chicken Keema Refers to Finely Minced Chicken Meat That Has Not Been Cooked Yet.",
+    "price": 239,
+    "category": "fresh meat",
+    "images": ["Chicken Keema.avif"]
+  },
+  {
+    "title": "Delichic Frozen Chicken Liver",
+    "description": "A chicken liver provides a healthy dose of iron, zinc, Vitamin A and B.",
+    "price": 150,
+    "category": "fresh meat",
+    "images": ["Chicken Liver.avif"]
+  },
+  {
+    "title": "Meatzza Frozen Chicken Drumstick (Antibiotic Free)",
+    "description": "Meatzza Fresh Chicken Drumstick 500G",
+    "price": 245,
+    "category": "fresh meat",
+    "images": ["Frozen Chicken.avif"]
+  },
+
+  {
+    "title": "Tomato",
+    "description": "Tomato is a versatile fruit with a tender and pulpy texture.",
+    "price": 28,
+    "category": "vegetables",
+    "images": ["Tomato.avif"]
+  },
+  {
+    "title": "Onion",
+    "description": "Onion is a staple in India and are commonly chopped and used as an ingredient in various hearty warm dishes.",
+    "price": 27,
+    "category": "vegetables",
+    "images": ["Onion.avif"]
+  },
+  {
+    "title": "Red Potato",
+    "description": "Enjoy the hearty flavor of Red Potatoes. Rich in antioxidants, fiber, and essential nutrients, they support digestive health and provide sustained energy.",
+    "price": 27,
+    "category": "vegetables",
+    "images": ["Potato.avif"]
+  },
+  {
+    "title": "Red Carrot",
+    "description": "Savor the rich sweetness of red carrots, prized for their vibrant color and nutritional value.",
+    "price": 23,
+    "category": "vegetables",
+    "images": ["Carrot.avif"]
+  },
+
+  {
+    "title": "Papaya",
+    "description": "Papaya is delicious eaten fresh, blended into smoothies, or used in salads and desserts.",
+    "price": 88,
+    "category": "fruit & nut gifts",
+    "images": ["Papaya.avif"]
+  },
+  {
+    "title": "Small Shimla Apple",
+    "description": "Small Shimla apples are crisp, sweet, and perfect for snacking.",
+    "price": 111,
+    "category": "fruit & nut gifts",
+    "images": ["Apple.avif"]
+  },
+  {
+    "title": "Grapes",
+    "description": "Juicy elongated berries with sweet fresh taste. They are considered best table fruit.",
+    "price": 98,
+    "category": "fruit & nut gifts",
+    "images": ["Grapes.avif"]
+  },
+  {
+    "title": "Alphonso Mango Ratnagiri",
+    "description": "Alphonso mango is sourced from Ratnagiri, Devgad and Konkan regions of Maharashtra.",
+    "price": 110,
+    "category": "fruit & nut gifts",
+    "images": ["Mango.avif"]
+  },
+
+  {
+    "title": "Relish Indian Blueberry",
+    "description": "Blueberries are small greyish-black fruits, encasing a semi-transparent pulp with a burst of sweet juice.",
+    "price": 159,
+    "category": "fresh berries",
+    "images": ["Berry.avif"]
+  },
+  {
+    "title": "Delishh Frozen Raspberry",
+    "description": "This product is a mixture of four types of dried berries (viz., cranberries, strawberries, blueberries and black currants) which is highly rich in energy and dietary fibre.",
+    "price": 528,
+    "category": "fresh berries",
+    "images": ["Frozen Raspberry.avif"]
+  },
+  {
+    "title": "Nutraj American Dried Cranberries",
+    "description": "Super food, rich in nutrients and antioxidants. These delicious cranberries are tart and juicy.",
+    "price": 149,
+    "category": "fresh berries",
+    "images": ["Nutraj American Cranberries.avif"]
+  },
+  {
+    "title": "Delishh Frozen Fresh Mix Berries",
+    "description": "Delishh frozen fruits have a fair amount of antioxidants and are great for making smoothies, juices and desserts.",
+    "price": 452,
+    "category": "fresh berries",
+    "images": ["Mix Berries.avif"]
+  },
+
+  {
+    "title": "Fried Shrimp",
+    "description": "This Fried Shrimp recipe is the ultimate appetizer recipe! You won’t believe how delicious these golden, crunchy bites of juicy shrimp are.",
+    "price": 452,
+    "category": "ocean foods",
+    "images": ["Fried Shrimp.jpg"]
+  },
+  {
+    "title": "Salmon Fish",
+    "description": "This slightly sweet, pink fish is among the richest sources of long-chain omega-3 fats, full of high-quality protein, vitamins and minerals.",
+    "price": 975,
+    "category": "ocean foods",
+    "images": ["Salmon fish.jpg"]
+  },
+  {
+    "title": "Easy Garlic Butter Poached Lobster Tails",
+    "description": "Lobsters are delicious shellfish items from sea.",
+    "price": 1000,
+    "category": "ocean foods",
+    "images": ["Lobster.jpeg"]
+  },
+  {
+    "title": "Indian Crab Curry",
+    "description": "This recipe for Indian crab curry minimizes the curry flavor so that the crab is the focus of the dish.",
+    "price": 852,
+    "category": "ocean foods",
+    "images": ["Crab.jpg"]
+  },
+
+  {
+    "title": "Amul Salted Butter",
+    "description": "Made from the freshest of cream, the Amul butter has wonderful taste which is delicate and slightly salty.",
+    "price": 58,
+    "category": "butter & eggs",
+    "images": ["Salted Butter.avif"]
+  },
+  {
+    "title": "Amul Unsalted Butter",
+    "description": "Made from pure milk. Pure and fresh butter.Spread over sandwiches, bread, roti and enhances the taste.",
+    "price": 61,
+    "category": "butter & eggs",
+    "images": ["Unsalted Butter.avif"]
+  },
+  {
+    "title": "Eggoz Nutrition Protein Rich Brown Eggs (10 pieces)",
+    "description": "Eggoz brings you the healthiest eggs.",
+    "price": 144,
+    "category": "butter & eggs",
+    "images": ["Eggoz Egg.avif"]
+  },
+  {
+    "title": "Table White Eggs (6 pcs)",
+    "description": "No artificial colours. Rich in taste.",
+    "price": 59,
+    "category": "butter & eggs",
+    "images": ["Table White Egg.avif"]
+  },
+
+  {
+    "title": "ITC Master Chef Peri Peri French Fries | Crispy & Spicy",
+    "description": "Crispy peri peri flavor, ready-to-cook convenience, perfect for quick snacks, ideal for parties, gatherings",
+    "price": 101,
+    "category": "fastfood",
+    "images": ["Peri peri french fries.webp"]
+  },
+  {
+    "title": "Veg Classic Burger",
+    "description": "A delightful potato based veggie burger with a tangy and savory filling perfect for all ages",
+    "price": 89,
+    "category": "fastfood",
+    "images": ["Veg Classic Burger.webp"]
+  },
+  {
+    "title": "Prasuma Veg & Paneer Momos | Frozen Snack",
+    "description": "Premium quality with no preservatives added, Ready to eat in just 2-3 minutes, Authentic taste with thin delicate wrapper",
+    "price": 120,
+    "category": "fastfood",
+    "images": ["Paneer Momos.webp"]
+  },
+  {
+    "title": "Knorr Chinese Manchurian Gravy Mix | Spicy & Easy-to-Cook",
+    "description": "Authentic Chinese flavor, easy to prepare, serves 4, no added preservatives",
+    "price": 55,
+    "category": "fastfood",
+    "images": ["Manchurian Gravy Mix.webp"]
+  },
+
+  {
+    "title": "Uncle Chipps Spicy Treat Flavour Potato Chips",
+    "description": "Who’s in for a roller coaster of spicy flavors and crunchy bites? If you feel like spicing up your day, you need a snack with character and Uncle Chipps Spicy Treat will surely do the trick.",
+    "price": 20,
+    "category": "papayaya & crisps",
+    "images": ["Uncle chips.avif"]
+  },
+  {
+    "title": "Bingo Mad Angles Pizza-aaaah Chips",
+    "description": "The perfect pizza flavour snack that brings Italy’s favourite taste into a crunchy Indian triangle chip.",
+    "price": 20,
+    "category": "papayaya & crisps",
+    "images": ["Bingo Mad angle chips.avif"]
+  },
+  {
+    "title": "Let's Try Vrat Mota Chips / Aloo Chips",
+    "description": "100% Groundnut oil with Rock Salt",
+    "price": 43,
+    "category": "papayaya & crisps",
+    "images": ["Vrat mota chips.avif"]
+  },
+  {
+    "title": "Troovy Healthy High Protein Moong Dal Chips",
+    "description": "Troovy's Healthy Moong Dal munchies in Tangy Tomato flavor, made with lentils and a burst of protein to make your snacking treats healthy",
+    "price": 65,
+    "category": "papayaya & crisps",
+    "images": ["Moong Dal Chips.avif"]
+  },
+
+  {
+    "title": "Pintola High Protein Oats (Dark Chocolate)",
+    "description": "Protein-Packed Wellness: Boast a substantial 22g of protein per 100g, making every spoonful a step towards sustained energy and fullness.",
+    "price": 283,
+    "category": "oatmeal",
+    "images": ["pintola dark chocolate.avif"]
+  },
+  {
+    "title": "Quaker Multigrain Rolled Oats Porridge",
+    "description": "Loaded with the goodness of Oats, Wheat, Ragi, and Barley.",
+    "price": 157,
+    "category": "oatmeal",
+    "images": ["multigrain oats.avif"]
+  },
+  {
+    "title": "Alpino High Protein Oats Chocolate 1 kg",
+    "description": "Made with natural peanut butter, rolled oats and, cocoa",
+    "price": 478,
+    "category": "oatmeal",
+    "images": ["Alpino oats.avif"]
+  },
+  {
+    "title": "Saffola Soft & Creamy Rolled Oats",
+    "description": "Saffola Oats are instant rolled oats from Europe and Australia, providing a soft, creamy texture.",
+    "price": 231,
+    "category": "oatmeal",
+    "images": ["Saffola creamy oats.avif"]
+  },
+
+  {
+    "title": "Yellaki Banana",
+    "description": "Yellaki bananas are known for their sweet taste and creamy texture, packed with natural potassium and great for snacking or blending into smoothies",
+    "price": 54,
+    "category": "fresh bananas",
+    "images": ["Yellaki Banana.avif"]
+  },
+  {
+    "title": "Baby Banana",
+    "description": "Smaller version of Banana Robusta has similar characterstics - green skin that turns yellow as it ripens and has creamy white flesh inside.",
+    "price": 35,
+    "category": "fresh bananas",
+    "images": ["Baby Banana.avif"]
+  },
+  {
+    "title": "The Baker's Dozen Zero Maida Banana Walnut Pound Cake, Whole Wheat",
+    "description": "Experience the perfect blend of sweetness and crunch with our Banana Walnut Cake – made with 100% whole wheat, fresh bananas, and premium Kashmiri walnuts.",
+    "price": 167,
+    "category": "fresh bananas",
+    "images": ["Banana Walnut cake.avif"]
+  },
+  {
+    "title": "Banana",
+    "description": "The most popular fruit in the world, bananas are subtly sweet and have a soft texture.",
+    "price": 34,
+    "category": "fresh bananas",
+    "images": ["Banana.avif"]
+  }
+]

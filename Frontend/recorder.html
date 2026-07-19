@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Screen Recorder</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111827;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #1f2937;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      width: 420px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    #startBtn {
+      background: #10b981;
+      color: white;
+    }
+
+    #stopBtn {
+      background: #ef4444;
+      color: white;
+    }
+
+    video {
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 10px;
+      background: black;
+    }
+
+    .status {
+      margin-top: 10px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Screen Recorder</h1>
+
+    <button id="startBtn">Start Recording</button>
+    <button id="stopBtn" disabled>Stop Recording</button>
+
+    <div class="status" id="status">
+      Ready to record
+    </div>
+
+    <video id="preview" controls></video>
+  </div>
+
+  <script>
+    let mediaRecorder;
+    let recordedChunks = [];
+    let screenStream;
+
+    const startBtn = document.getElementById("startBtn");
+    const stopBtn = document.getElementById("stopBtn");
+    const preview = document.getElementById("preview");
+    const status = document.getElementById("status");
+
+    startBtn.addEventListener("click", async () => {
+      try {
+        // Ask user to share screen
+        screenStream = await navigator.mediaDevices.getDisplayMedia({
+          video: true,
+          audio: true
+        });
+
+        recordedChunks = [];
+
+        // Create recorder
+        mediaRecorder = new MediaRecorder(screenStream);
+
+        // Save chunks
+        mediaRecorder.ondataavailable = (event) => {
+          if (event.data.size > 0) {
+            recordedChunks.push(event.data);
+          }
+        };
+
+        // When stopped
+        mediaRecorder.onstop = () => {
+          // Create video blob
+          const blob = new Blob(recordedChunks, {
+            type: "video/webm"
+          });
+
+          // Preview recording
+          const videoURL = URL.createObjectURL(blob);
+          preview.src = videoURL;
+
+          // Auto download
+          const a = document.createElement("a");
+          a.href = videoURL;
+          a.download = `screen-recording-${Date.now()}.webm`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+
+          status.textContent = "Recording saved successfully.";
+
+          // Stop all tracks
+          screenStream.getTracks().forEach(track => track.stop());
+        };
+
+        mediaRecorder.start();
+
+        status.textContent = "Recording in progress...";
+        startBtn.disabled = true;
+        stopBtn.disabled = false;
+
+      } catch (err) {
+        console.error(err);
+        alert("Screen recording permission denied or failed.");
+      }
+    });
+
+    stopBtn.addEventListener("click", () => {
+      mediaRecorder.stop();
+
+      startBtn.disabled = false;
+      stopBtn.disabled = true;
+
+      status.textContent = "Stopping recording...";
+    });
+  </script>
+
+</body>
+</html>
