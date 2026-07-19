@@ -42,10 +42,21 @@ app.use(cors({
     credentials: true
 }));
 
-
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use((err, req, res, next) => {
+    if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
+        console.error('Invalid JSON payload:', err.message, 'Content-Type:', req.headers['content-type']);
+        return res.status(400).json({ message: 'Invalid JSON payload sent to server' });
+    }
+    next(err);
+});
 app.use(cookieParser());
 
+app.use('/signup', (req, res, next) => {
+    console.log('SIGNUP REQUEST', req.method, req.headers['content-type'], req.body);
+    next();
+});
 
 // min, max, maxlength, minlength, required, trim etc
 const userSchema = new mongoose.Schema({
@@ -61,7 +72,7 @@ const userSchema = new mongoose.Schema({
         required: [true, "Email is required"],
         validate: {
             validator: (value) => {
-                const pattern = /^.+@.+\..+$/;
+                const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 return typeof value === "string" && pattern.test(value);
             },
             message: "Please provide a valid email address"
