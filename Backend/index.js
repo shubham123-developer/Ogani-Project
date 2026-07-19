@@ -17,14 +17,18 @@ dotenv.config();
 // console.log(process.env.RAZ_KEY_SECRET);
 // console.log(process.env.RAZ_API_KEY);
 
-mongoose.connect("mongodb://127.0.0.1:27017/ogani")
+const PORT = process.env.PORT || 8080;
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/ogani";
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
+
+mongoose.connect(MONGODB_URI)
     .then(() => console.log("Connected!"))
     .catch(err => console.log(err));
 
 
 const app = express();
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: FRONTEND_URL,
     credentials: true
 }));
 
@@ -396,7 +400,7 @@ app.post("/contact", async (req, res) => {
     }
 })
 
-app.listen(8080, () => console.log("Server running on port 8080"));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
 
