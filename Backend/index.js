@@ -61,8 +61,8 @@ const userSchema = new mongoose.Schema({
         required: [true, "Email is required"],
         validate: {
             validator: (value) => {
-                const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return pattern.test(value);
+                const pattern = /^.+@.+\..+$/;
+                return typeof value === "string" && pattern.test(value);
             },
             message: "Please provide a valid email address"
         },
@@ -284,6 +284,9 @@ app.post("/cart", checkAuth, async (req, res) => {
 app.post("/signup", async (req, res) => {
     try {
         let { name, email, phone, password } = req.body; //{name: "sachin", email: "sachin@gmail.com", ...}
+        const emailPattern = /^.+@.+\..+$/;
+        console.log('SIGNUP BODY:', JSON.stringify(req.body));
+        console.log('EMAIL TEST:', emailPattern.test(email), 'EMAIL:', JSON.stringify(email));
         password = await bcrypt.hash(password, 12);
         const newUser = await userModel.create({ name, email, phone, password });
         res.status(201).json({ message: newUser });
